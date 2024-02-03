@@ -150,3 +150,7 @@ static/
 yatube_api/posts/static/
 media/
 
+draft/
+yatube_api/api/admin.py
+yatube_api/api/models.py
+yatube_api/api/tests.py
