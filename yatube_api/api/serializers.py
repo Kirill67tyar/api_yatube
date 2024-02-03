@@ -22,11 +22,6 @@ class PostModelSerializer(ModelSerializer):
             'group',
             'pub_date',
         )
-        read_only_fields = (
-            'id',
-            'image',
-            'pub_date',
-        )
 
 
 class GroupModelSerializer(ModelSerializer):
@@ -42,7 +37,6 @@ class GroupModelSerializer(ModelSerializer):
 
 
 class CommentModelSerializer(ModelSerializer):
-
     author = SlugRelatedField(
         read_only=True,
         slug_field='username'
@@ -57,8 +51,4 @@ class CommentModelSerializer(ModelSerializer):
             'text',
             'created',
         )
-        read_only_fields = (
-            'id',
-            'post',
-            'created',
-        )
+        read_only_fields = ('post',)
